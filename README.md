@@ -48,11 +48,9 @@ O banco foi modelado em **modelo relacional**, conforme abaixo:
 SELECT nome, telefone FROM CLIENTE;
 
 ### 2. Veículos fabricados após 2015
-```sql
 SELECT * FROM VEICULO WHERE ano > 2015;
 
 ### 3. Preço das peças com imposto (atributo derivado)
-```sql
 SELECT nome, preco, preco * 1.10 AS preco_com_imposto
 FROM PECA;
 
@@ -61,14 +59,14 @@ FROM PECA;
 SELECT * FROM MECANICO ORDER BY nome ASC;
 
 ### 5. Ordens com mais de 1 peça (HAVING)
-```sql
+
 SELECT id_os, SUM(quantidade) AS total_pecas
 FROM OS_PECA
 GROUP BY id_os
 HAVING total_pecas > 1;
 
 ### 6. Clientes atendidos por mecânico (JOIN)
-```sql
+
 SELECT c.nome AS cliente, v.modelo, m.nome AS mecanico, os.data_emissao
 FROM ORDEM_SERVICO os
 JOIN VEICULO v ON os.id_veiculo = v.id_veiculo
@@ -76,7 +74,7 @@ JOIN CLIENTE c ON v.id_cliente = c.id_cliente
 JOIN MECANICO m ON os.id_mecanico = m.id_mecanico;
 
 ### 7. Valor total calculado da OS
-```sql
+
 SELECT os.id_os,
        SUM(s.preco * oss.quantidade) + SUM(p.preco * osp.quantidade) AS valor_total
 FROM ORDEM_SERVICO os
@@ -86,7 +84,7 @@ JOIN OS_PECA osp ON os.id_os = osp.id_os
 JOIN PECA p ON osp.id_peca = p.id_peca
 GROUP BY os.id_os;
 
-🚀 Como Executar
+# 🚀 Como Executar
 
 Abra o MySQL Workbench.
 
@@ -98,12 +96,10 @@ Clique no raiozinho ⚡ para criar o banco e inserir os dados.
 
 Execute as queries de exemplo para testar o banco.
 
-📌 Autor
+# 📌 Autor
 Breno Rodrigues 
 
 Desenvolvido como desafio prático de modelagem e SQL no contexto de uma oficina mecânica.
-
-
 ---
 
 
