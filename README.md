@@ -84,7 +84,7 @@ JOIN OS_PECA osp ON os.id_os = osp.id_os
 JOIN PECA p ON osp.id_peca = p.id_peca
 GROUP BY os.id_os;
 
-# 🚀 Como Executar
+## 🚀 Como Executar
 
 Abra o MySQL Workbench.
 
@@ -96,7 +96,7 @@ Clique no raiozinho ⚡ para criar o banco e inserir os dados.
 
 Execute as queries de exemplo para testar o banco.
 
-# 📌 Autor
+## 📌 Autor
 Breno Rodrigues 
 
 Desenvolvido como desafio prático de modelagem e SQL no contexto de uma oficina mecânica.
