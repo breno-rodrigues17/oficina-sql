@@ -29,22 +29,7 @@ O banco foi modelado em **modelo relacional**, conforme abaixo:
 ## 📊 Modelo Relacional (Diagrama)
 
 ```
-CLIENTE (id_cliente PK, nome, telefone, email)
-       |
-       |---< VEICULO (id_veiculo PK, id_cliente FK, placa, modelo, ano)
-                      |
-                      |---< ORDEM_SERVICO (id_os PK, id_veiculo FK, id_mecanico FK, data_emissao, valor_total)
-                                  |                                |
-                                  |                                |---< MECANICO (id_mecanico PK, nome, especialidade)
-                                  |
-                                  |---< OS_SERVICO (id_os FK, id_servico FK, quantidade)
-                                  |           |
-                                  |           |---< SERVICO (id_servico PK, descricao, preco)
-                                  |
-                                  |---< OS_PECA (id_os FK, id_peca FK, quantidade)
-                                              |
-                                              |---< PECA (id_peca PK, nome, preco)
-```
+![Minha imagem](diagramasql.png)
 
 ---
 
