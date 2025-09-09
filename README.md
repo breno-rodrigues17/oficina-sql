@@ -29,7 +29,7 @@ O banco foi modelado em **modelo relacional**, conforme abaixo:
 ## 📊 Modelo Relacional (Diagrama)
 
 ```
-![Minha imagem](diagramasql.png)
+![Diagrama SQL](diagramasql.png)
 
 ---
 
